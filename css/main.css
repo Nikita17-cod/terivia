@@ -502,6 +502,7 @@ section {
 }
 
 .menu__item {
+    margin-bottom: 7px;
     text-align: center;
     padding-left: 23px;
     padding-right: 23px;
@@ -512,6 +513,10 @@ section {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.header__button {
+    border: 3px solid #000;
 }
 
 
@@ -2218,12 +2223,12 @@ section {
         font-size: 18px;
         margin-bottom: 15px;
     }
-    .header__block_btn {
-        display: none;
-    }
 }
 
 @media (max-width: 992px) {
+    .header__contact {
+        display: none;
+    }
     .header {
         height: auto;
     }
@@ -2261,6 +2266,9 @@ section {
     .footer__img {
         width: 135px;
     }
+    .header__wrapper {
+        justify-content: space-around;
+    }
 }
 
 @media (max-width: 934px) {
@@ -2279,6 +2287,13 @@ section {
 }
 
 @media (max-width: 780px) {
+    .header__nav {
+        display: none;
+    }
+    .header__toggle {
+        display: block;
+        margin-bottom: 12px;
+    }
     .info__contact {
         display: flex;
         justify-content: center;
@@ -2488,7 +2503,7 @@ section {
         display: -webkit-flex;
         align-items: center;
         justify-content: space-between;
-        color: #ff6600;
+        color: #000;
         text-decoration: none;
         /*     padding-left: 10px;
     padding-right: 10px;*/
@@ -2515,7 +2530,7 @@ section {
         min-width: 127px;
         padding: 0px 0 5px 0;
         margin: 9px -50px 0;
-        background-color: #fff;
+        background-color: #FF6601;
         /*    -webkit-background-clip: padding-box;
     background-clip: padding-box;*/
         transition: opacity 0.3s linear, visibility 0.3s;
@@ -2627,20 +2642,13 @@ section {
         /*    padding-top: 5px;*/
         width: 100%;
     }
-    .header__toggle {
-        position: relative;
-        top: 15px;
-        display: block;
-        width: 50px;
-        height: 50px;
-    }
     .header__menu {
         width: 100%;
         height: auto;
         border-radius: 0;
     }
     .header__mobile {
-        padding-bottom: 40px;
+        padding-bottom: 20px;
         /* display: flex;*/
         align-items: center;
         justify-content: center;
@@ -2740,7 +2748,7 @@ section {
         -ms-flex-align: center;
         align-items: center;
         padding-top: 10px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
     }
     .btn_mobile {
         text-align: center;
