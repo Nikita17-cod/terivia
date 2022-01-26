@@ -111,6 +111,10 @@ strong {
     font-weight: bold;
 }
 
+.top-img {
+    display: none;
+}
+
 
 /* .btn {
     padding: 15px;
@@ -220,9 +224,6 @@ section {
     padding: 40px 0;
 }
 
-
-/* header */
-
 .header {
     position: fixed;
     left: 0;
@@ -231,29 +232,7 @@ section {
     background-color: #FF6601;
     -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.header__wrap {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 75px;
-    width: 100%;
-    margin: 0 auto;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    justify-content: center
+    height: 65px;
 }
 
 .header__wrap_scroll {
@@ -289,7 +268,11 @@ section {
 }
 
 .header__block--leng {
-    height: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .header__block--leng-ru {
@@ -302,7 +285,7 @@ section {
     background-color: #000;
     font-weight: 700;
     padding: 2px;
-    margin-top: 15px;
+    /* margin-top: 20px; */
 }
 
 .header__phone {
@@ -328,6 +311,54 @@ section {
 
 .header__toggle {
     display: none;
+}
+
+.header__lang {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__logo {
+    width: 170px;
+    height: auto;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+}
+
+.header__ua {
+    color: #FF6601 !important;
+    font-weight: 600;
+    background-color: #000;
+    padding: 3px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.header__ru {
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #000 !important;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .header__list-of-cities {
@@ -365,6 +396,8 @@ section {
 }
 
 .header__list-main-button {
+    border: none;
+    font-size: 17px;
     transition: opacity 0.1s;
     -webkit-transition: opacity 0.2s;
     width: 100%;
@@ -372,7 +405,7 @@ section {
     padding: 3px;
     font-size: 15px;
     font-family: "MuseoSansCyrl-700", Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     /* color: #ffffff; */
     text-transform: uppercase;
     background-color: #000;
@@ -421,6 +454,7 @@ section {
 .list-of-cities-items {
     padding: 5px;
     text-align: center;
+    border-radius: 0 !important;
     /* border-top: 1px solid white;*/
     margin-top: 4px;
     /*   width: 83.5px;*/
@@ -429,9 +463,9 @@ section {
     font-size: 16px;
     font-family: "MuseoSansCyrl-700", Arial, Helvetica, sans-serif;
     font-weight: 700;
-    color: #ffffff;
+    color: #ff6600 !important;
     text-transform: uppercase;
-    background-color: #ff6600;
+    background-color: #000;
     border-radius: 7px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -469,20 +503,15 @@ section {
 
 .menu__item {
     text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
+    font-size: 17px;
     font-family: "MuseoSansCyrl-700", Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     color: #000;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-}
-
-.menu__item:hover {
-    color: #ff6600;
-    text-decoration: none;
 }
 
 
@@ -505,6 +534,12 @@ section {
 
 .info__photo {
     width: 50%;
+}
+
+.info__photo--img {
+    margin-top: -80px;
+    height: auto;
+    width: 600px;
 }
 
 .info__wrapper {
@@ -755,6 +790,13 @@ section {
 
 .footer__logo {
     display: flex;
+    justify-content: space-between
+}
+
+.footer__img {
+    margin-top: -20px;
+    height: auto;
+    width: 200px;
 }
 
 
@@ -1621,7 +1663,7 @@ section {
 }
 
 .phone-input:before {
-    content: url(../img/call.svg);
+    content: url(../img/phone-svgrepo-com.svg);
     position: absolute;
     cursor: pointer;
     display: inline-block;
@@ -2107,6 +2149,262 @@ section {
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1400px) {
+    .menu__item {
+        font-weight: 700;
+        font-size: 15px;
+        padding-right: 17px;
+        padding-left: 17px;
+    }
+    .container {
+        max-width: 1320px;
+    }
+    .header__block_logo {
+        width: 120px;
+    }
+    .menu {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1260px) {
+    .header__logo {
+        width: 125px;
+    }
+    .factory__img {
+        width: 250px;
+        bottom: 100px;
+        right: 100px;
+    }
+    .del {
+        display: none;
+    }
+    .footer__wrapper {
+        justify-content: space-around;
+    }
+    .footer__img {
+        margin-top: 0;
+        width: 170px;
+    }
+    .header__menu {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .header__menu {
+        margin-right: 8px;
+        margin-left: 8px;
+        font-size: 12px;
+    }
+    .header__ua,
+    .header__ru {
+        font-size: 14px;
+    }
+    .header__list-main-button {
+        font-size: 13px;
+    }
+    .factory__img {
+        width: 200px;
+        bottom: 100px;
+        right: 20px;
+    }
+    .footer__title {
+        font-size: 30px;
+    }
+    .footer__text {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .header__block_btn {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        height: auto;
+    }
+    .info__description,
+    .comparison__description,
+    .factory__discription {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .info__about--p {
+        color: #535353;
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+    .comparison__title {
+        font-size: 20px;
+    }
+    .comparison__text {
+        margin-top: 17px;
+        font-size: 20px;
+    }
+    .factory__title {
+        font-size: 20px;
+    }
+    .factory__text {
+        font-size: 19px;
+    }
+    .factory__img {
+        width: 150px;
+        top: 1px;
+        right: 10px;
+    }
+    .footer__img {
+        width: 135px;
+    }
+}
+
+@media (max-width: 934px) {
+    .footer__wrapper {
+        flex-direction: column;
+    }
+    .top-img {
+        display: block;
+    }
+    .del-img {
+        display: none;
+    }
+    .footer__copyright {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 780px) {
+    .info__contact {
+        display: flex;
+        justify-content: center;
+    }
+    .btn {
+        font-size: 22px;
+        font-weight: 800;
+        padding: 3px 7px;
+    }
+    .info__contact--title {
+        font-size: 15px;
+    }
+    .info__contact--number {
+        height: 39px;
+    }
+    .info__contact {
+        margin-top: 25px;
+    }
+    .info__description {
+        font-size: 35px;
+        margin-bottom: 27px;
+    }
+    .using__description,
+    .benefits__description,
+    .comparison__description {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .using__col,
+    .benefits__col {
+        flex-basis: 50%;
+        padding: 10px;
+    }
+    .comparison__wrapper {
+        flex-direction: column;
+    }
+    .comparison__right {
+        margin-top: 20px;
+    }
+    .factory__img {
+        width: 85px;
+        top: 10px;
+        right: 10px;
+    }
+    .factory__discription {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 710px) {
+    .info__about,
+    .info__photo {
+        width: 100%;
+    }
+    .info__description,
+    .info__about--p,
+    .info__about--d {
+        text-align: center;
+    }
+    .info__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__photo--img {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 625px) {
+    .info__contact {
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .info__contact--phone {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 485px) {
+    .using__description,
+    .benefits__description,
+    .comparison__description,
+    .factory__discription {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .using__col,
+    .benefits__col {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .info__description,
+    .info__about--p,
+    .info__about--d {
+        text-align: left;
+    }
+    .btn {
+        font-size: 19px;
+        font-weight: 800;
+        padding: 3px 7px;
+    }
+    .factory__title {
+        font-size: 15px;
+    }
+    .factory__text {
+        font-size: 15px;
+    }
+    .factory__img {
+        width: 60px;
+        top: 60px;
+        right: 10px;
+    }
+    .footer__title {
+        font-size: 25px;
+    }
+    .footer__text {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     /* form */
     .header__list-main-button:active+.list-of-cities-body {
@@ -2151,9 +2449,9 @@ section {
     }
     .header__block_logo-items {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        width: 70%;
+        justify-content: space-between;
+        height: 65px;
     }
     .ua-button {
         border-radius: 75px;
@@ -2177,9 +2475,6 @@ section {
     .phone__admin {
         width: 78px;
         display: block;
-    }
-    .header__phons * {
-        display: none;
     }
     .phone__mobile__link {
         margin-right: 0px;
@@ -2405,7 +2700,7 @@ section {
     .toggle-mnu span:before {
         width: 100%;
         height: 4px;
-        background-color: #ff6600;
+        background-color: #000;
         -webkit-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
@@ -2902,12 +3197,6 @@ section {
     }
 }
 
-@media screen and (max-width:375px) {
-    .header__toggle {
-        /* top: 47px;*/
-    }
-}
-
 @media screen and (max-width: 340px) {
     .header__list-main-button {
         font-size: 10px;
@@ -2927,9 +3216,6 @@ section {
     .header__phone {
         width: 190px;
         font-size: 18px;
-    }
-    .header__block_btn {
-        /*padding: 5px 0;*/
     }
     .list-of-cities-body {
         top: 22px;
